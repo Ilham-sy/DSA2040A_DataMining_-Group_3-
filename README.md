@@ -65,8 +65,6 @@ We'll generate a synthetic health dataset containing:
 - Clinical metrics: BMI, blood pressure, cholesterol
 - Medical outcomes: Diagnosis, hospital stay, readmission
 
-
-
 # ETL Process for Health Records Data
 ## Overview
 This project focuses on extracting, transforming, and loading (ETL) health records data to uncover insights that can lead to improved patient outcomes. The ETL process involves extracting data from various sources, transforming it to fit the analysis needs, and loading it into a structured format for further analysis. 
@@ -86,11 +84,14 @@ import numpy as np
 import os
 # 1. Read health records data
 input_file = 'health_records.csv'
-df = pd.read_csv(input_file)            
+df = pd.read_csv(input_file)  
+
 # 2. Handle missing values
 df.fillna(method='ffill', inplace=True)  # Forward fill for simplicity
+
 # 3. Standardize formats        
-df['visit_date'] = pd.to_datetime(df['visit_date'], errors='coerce')  # Convert to datetime     
+df['visit_date'] = pd.to_datetime(df['visit_date'], errors='coerce')  # Convert to datetime 
+    
 # 4. Enrich data with additional information
 def enrich_row(row):
     if row['age'] < 18:         
@@ -102,9 +103,10 @@ def enrich_row(row):
     risk_score = row['bmi'] * 0.1 + row['blood_pressure'] * 0.2
     is_chronic = row['chronic_condition'] == 'Yes'      
     return pd.Series([age_group, risk_score, is_chronic], index=['age_group', 'risk_score', 'is_chronic'])
+    
 # Apply to DataFrame
-df[['age_group', 'risk_score', 'is_chronic']] = df.apply(enrich     
-_row, axis=1)       
+df[['age_group', 'risk_score', 'is_chronic']] = df.apply(enrich_row, axis=1)
+
 # 5. Save DataFrame to CSV
 output_dir = 'health_records'           
 os.makedirs(output_dir, exist_ok=True)  # Create directory if it doesn't exist
