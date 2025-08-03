@@ -1,0 +1,3 @@
+smoking_status,Asthma,Diabetes,Healthy,Heart Disease,Hypertension,Obesity
+Non-smoker,0,17,17,16,0,0
+Smoker,17,0,0,0,17,16
