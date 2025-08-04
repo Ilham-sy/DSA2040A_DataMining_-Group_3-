@@ -1,0 +1,13 @@
+diagnosis,readmitted,count
+Asthma,No,14
+Asthma,Yes,3
+Diabetes,No,14
+Diabetes,Yes,3
+Healthy,No,15
+Healthy,Yes,2
+Heart Disease,No,14
+Heart Disease,Yes,2
+Hypertension,No,14
+Hypertension,Yes,3
+Obesity,No,14
+Obesity,Yes,2
