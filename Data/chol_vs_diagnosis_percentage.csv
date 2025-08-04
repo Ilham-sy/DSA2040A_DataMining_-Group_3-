@@ -1,0 +1,4 @@
+cholesterol_level,Asthma,Diabetes,Healthy,Heart Disease,Hypertension,Obesity
+High,51.515151515151516,0.0,0.0,48.484848484848484,0.0,0.0
+Low,0.0,0.0,50.0,0.0,50.0,0.0
+Normal,0.0,51.515151515151516,0.0,0.0,0.0,48.484848484848484
