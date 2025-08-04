@@ -28,13 +28,96 @@ This directory contains the exploratory data analysis (EDA) conducted on the `cl
 
 ## ✅ Key Insights
 
-- **Medication adherence** impacts readmission: non-adherent patients had a higher chance of being readmitted.
-- **Diabetes** was only observed in patients with **normal cholesterol** and **non-smoking** status.
-- **Asthma** and **Hypertension** were more common in patients who **smoked** or had **high cholesterol**.
-- **Physical activity** correlated with diagnosis type:
-  - Active individuals mostly had asthma or heart disease.
-  - Sedentary individuals mostly had hypertension or were labeled obese.
-- Weak positive correlation found between **age** and **hospital stay days**.
+This report presents the **non-visual exploratory data analysis (EDA)** of a healthcare dataset. The analysis focuses on cleaning, summarizing, and identifying trends related to patient readmission and health behavior. Visualization will be handled separately.
+
+---
+
+## ✅ 1. Data Overview
+
+- **Total Records**: 100
+- **Columns**: 14 features (categorical, numerical, date-based)
+- **Missing Values**: None
+- **Duplicate Records**: None
+
+---
+
+## 📊 2. Key Variable Distributions
+
+- **Gender**:
+  - Male: 50%
+  - Female: 50%
+- **Smoking Status**:
+  - Smoker: 50%
+  - Non-smoker: 50%
+- **Medication Adherence**:
+  - Adherent: 50%
+  - Non-adherent: 50%
+- **Cholesterol Level**:
+  - Low: 34%
+  - Normal: 33%
+  - High: 33%
+- **Diagnosis Breakdown**:
+  - Hypertension: 17
+  - Diabetes: 17
+  - Asthma: 17
+  - Healthy: 17
+  - Obesity: 16
+  - Heart Disease: 16
+
+---
+
+## 📈 3. Readmission Analysis
+
+- **Overall Readmission Rate**: 15%
+- **Top Diagnoses by Readmission Rate** *(17.6%)*:
+  - 🫁 Asthma
+  - 🩸 Diabetes
+  - 🫀 Hypertension
+- **Readmission by Gender**:
+  - Female: 7 readmitted
+  - Male: 8 readmitted
+- **Readmission by Medication Adherence**:
+  - Adherent: 8 readmitted
+  - Non-adherent: 7 readmitted
+
+---
+
+## 🔁 4. Crosstab Insights
+
+### Cholesterol Level vs Diagnosis
+
+- **High Cholesterol**:
+  - Most common in *Asthma* and *Heart Disease* patients
+- **Normal Cholesterol**:
+  - Linked to *Diabetes* and *Obesity*
+- **Low Cholesterol**:
+  - Seen mostly in *Healthy* and *Hypertension*
+
+### Smoking Status vs Diagnosis
+
+- **Smokers**:
+  - Most common in *Hypertension* and *Obesity*
+- **Non-smokers**:
+  - Linked to *Healthy*, *Diabetes*, and *Heart Disease*
+
+---
+
+## 🗓 5. Visit Dates
+
+- **Range**: `2023-01-01` to `2024-05-10`
+
+---
+
+## 💾 6. Exported Outputs
+
+All descriptive statistics and crosstab results were saved as `.csv` files inside the `/Data/` folder for downstream analysis and visualization.
+
+---
+
+## 🔍 Notes
+
+This EDA focuses strictly on **descriptive statistics**. Visual insights will be presented by a separate team member using the exported `.csv` files generated in this notebook.
+
 
 ---
 
