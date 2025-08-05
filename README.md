@@ -26,9 +26,36 @@ This directory contains the exploratory data analysis (EDA) conducted on the `cl
 
 ---
 
-## ✅ Key Insights
+## ✅ Key Insights (ANALYST DISCUSSION)
+Project: Patient Readmission Risk Analysis
 
-This report presents the **non-visual exploratory data analysis (EDA)** of a healthcare dataset. The analysis focuses on cleaning, summarizing, and identifying trends related to patient readmission and health behavior. Visualization will be handled separately.
+
+🔍 KEY FINDINGS:
+1.⁠ ⁠Overall Readmission Rate: 15% (15 out of 100 patients)
+
+2.⁠ ⁠Highest Readmission by Diagnosis:
+   - Asthma, Diabetes, and Hypertension all have 17.6% readmission — the highest in the dataset.
+   - These conditions should be prioritized for intervention programs.
+
+3.⁠ ⁠Medication Adherence Paradox:
+   - Adherent patients have a higher readmission rate (16.0%) than non-adherent (14.0%).
+   - Likely explanation: sicker patients are more likely to adhere to medication but still face complications.
+   - Recommendation: Do not assume adherence = lower risk. Consider disease severity.
+
+4.⁠ ⁠Chronic Patients at Higher Risk:
+   - 16.4% readmission rate vs 12.1% for non-chronic
+   - Longer hospital stays (6.9 vs 6.4 days)
+   - Significantly higher risk scores (3.10 vs 2.06)
+
+5.⁠ ⁠Top Risk Profile:
+   - Smoker + High Cholesterol + High BMI → Risk Score = 6.0 (maximum)
+   - These patients need proactive monitoring, even if not yet readmitted.
+
+✅ RECOMMENDATIONS:
+•⁠  ⁠Launch targeted care management for patients with Asthma, Diabetes, and Hypertension.
+•⁠  ⁠Investigate why adherent patients are readmitted — is treatment effective?
+•⁠  ⁠Use the risk_score to flag high-risk patients for early intervention (e.g., lifestyle coaching).
+•⁠  ⁠Validate findings with larger real-world data — this is synthetic but trend-aware.
 
 ---
 
